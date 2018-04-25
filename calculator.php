@@ -20,6 +20,10 @@ function divNums($firstnum,$secondnum){
 	$result = $firstnum / $secondnum;
 	return $result;
 }
+function modNums($firstnum,$secondnum){
+	$result = $firstnum % $secondnum;
+	return $result;
+}
 switch($_GET['math']){
 	case 'add':
 		echo addNums($_GET['first'],$_GET['second']);
@@ -32,6 +36,9 @@ switch($_GET['math']){
 		break;
 	case 'divide':
 		echo divNums($_GET['first'],$_GET['second']);
+		break;
+	case 'modulus':
+		echo modNums($_GET['first'],$_GET['second']);
 		break;
 }
 ?>
